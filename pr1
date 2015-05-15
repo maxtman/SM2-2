@@ -1,0 +1,20 @@
+uses Dict, tuna;
+
+var
+   badguys, goodguys: Dictionary;
+   legislator: nametype;
+   command: char;
+   
+begin
+   InitDict(goodguys);
+   InitDict(badguys);
+   read(command);
+ 
+   while command <> 'e' do begin
+     readln(legislator);
+     if command = 'f' then Insrt(legislator, goodguys)
+     else if command = 'u' then Insrt(legislator, badguys);
+ 
+     readln(command)
+   end
+end.   
